@@ -16,8 +16,7 @@ import teste.opf.MatrixToOPF;
 public class ConverterParaOPF {
     public static void main(String args[]) throws IOException{
         DenseMatrix m = new DenseMatrix();
-        m.load("E:\\iris.data");
-        
+        m.load("E:\\iris.data");        
         MatrixToOPF mToOPF = new MatrixToOPF(m);
         mToOPF.save("E:\\iris.data.opf");
         mToOPF.saveText("E:\\iris.data.opf.txt");
