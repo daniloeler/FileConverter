@@ -16,7 +16,8 @@ import teste.matrix.DenseMatrix;
 public class AtribuirClasses {
     public static void main(String args[]) throws IOException{
         DenseMatrix dm = new DenseMatrix();
-        dm.load("e:\\AllFiguresNotNormalized.data");        
+        dm.load("e:\\AllFiguresNotNormalized.data");       
+        
         FindClasses fC = new FindClasses(dm);
         fC.execute("_");
         fC.getNewMatrix().save("e:\\AllFigures-withClasses-NotNormalized.data");
