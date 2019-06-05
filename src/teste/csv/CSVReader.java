@@ -26,9 +26,11 @@ public class CSVReader {
 
     private DenseMatrix matrix;
     private boolean hasClass;
-
-    public CSVReader(boolean hasClass) {
+    private boolean hasID;
+    
+    public CSVReader(boolean hasClass, boolean hasID) {
         this.hasClass = hasClass;
+        this.hasID = hasID;
         this.matrix = new DenseMatrix();
     }
 
@@ -59,10 +61,15 @@ public class CSVReader {
             int labelcount = 0;
             while ((line = in.readLine()) != null && line.trim().length() > 0) {
                 StringTokenizer t2 = new StringTokenizer(line, ",");
-
-                //read the id
-                String id = Integer.toString(idInt);
-                idInt++;
+                String id;
+                if (hasID){
+                   id = t2.nextToken();
+                }
+                else{
+                   id = Integer.toString(idInt);
+                   idInt++;
+                }
+                
 
                 //class data
                 float klass = 0.0f;

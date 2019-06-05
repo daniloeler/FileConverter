@@ -19,7 +19,7 @@ public class Testes {
 //        DenseVector vec = (DenseVector) matrix.getRow(0);
 //        vec.getValue(0);
 
-        CSVReader reader = new CSVReader(true);
+        CSVReader reader = new CSVReader(true, true);
         reader.load("C:\\Users\\danilo\\Downloads\\resumido - 5 classes.csv");
         reader.getMatrix().save("C:\\Users\\danilo\\Downloads\\resumido - 5 classes.csv.data");
 
