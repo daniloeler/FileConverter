@@ -20,8 +20,8 @@ public class Testes {
 //        vec.getValue(0);
 
         CSVReader reader = new CSVReader(true, true);
-        reader.load("C:\\Users\\danilo\\Downloads\\resumido - 5 classes.csv");
-        reader.getMatrix().save("C:\\Users\\danilo\\Downloads\\resumido - 5 classes.csv.data");
+        reader.load("E:\\DANILO\\UNESP\\GIT\\fruitdataset\\filename-class.csv");
+        reader.getMatrix().save("E:\\DANILO\\UNESP\\GIT\\fruitdataset\\filename-class.csv.data");
 
 
     }
